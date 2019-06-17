@@ -2,7 +2,7 @@
 
 ### Start mock server
 
-`FLASK_APP=threadpool-flask.py flask run`
+`FLASK_APP=flaskmock.py flask run`
 
 
 ### Configuration
