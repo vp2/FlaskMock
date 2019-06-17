@@ -1,5 +1,13 @@
 # FlaskMock
 
+### Requirements
+
+Python 2.7+
+
+Linux users: `sudo pip install Flask jsonschema requests objectpath`
+
+MAC users: `pip install --user Flask jsonschema requests objectpath`
+
 ### Start mock server
 
 `FLASK_APP=flaskmock.py flask run`
