@@ -1,9 +1,7 @@
-FROM alpine:3.7
+FROM python:2
 
-RUN apk update && \
-    apk add py2-pip
-
-RUN pip install --upgrade pip
+RUN apt-get update -y && \
+    apt-get install -y python-pip python-dev
 
 COPY ./requirements.txt /opt/FlaskMock/requirements.txt
 
