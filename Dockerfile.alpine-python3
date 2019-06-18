@@ -1,0 +1,20 @@
+FROM alpine:latest
+
+RUN apk update && apk add python3
+RUN python3 -m ensurepip
+
+COPY ./requirements.txt /opt/FlaskMock/requirements.txt
+
+WORKDIR /opt/FlaskMock
+
+RUN pip3 install -r requirements.txt
+
+COPY . /opt/FlaskMock
+RUN chmod a+x boot.sh
+
+EXPOSE 5000
+
+VOLUME /opt/FlaskMock
+
+ENV FLASK_APP flaskmock.py
+ENTRYPOINT ["./boot.sh"]
